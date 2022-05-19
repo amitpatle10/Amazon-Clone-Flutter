@@ -1,4 +1,4 @@
-#Thu May 19 23:46:49 IST 2022
-base.0=/Users/amitpatle/StudioProjects/amazon_clone/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Fri May 20 01:01:14 IST 2022
+base.0=/Users/amitpatle/Desktop/FYP/amazon_clone/android Project/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
