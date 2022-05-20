@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// Banner Big Card
+
 class BannerCard extends StatelessWidget {
   String imageLink;
   BannerCard({required this.imageLink});
