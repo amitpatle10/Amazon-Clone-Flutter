@@ -10,74 +10,94 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              const TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'search in amazon....',
-                  filled: true,
-                  fillColor: Colors.greenAccent,
-                ),
+        body: Column(
+          children: [
+            const TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'search in amazon....',
+                filled: true,
+                fillColor: Colors.greenAccent,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
                   children: [
-                    SquareCard(imageLink: '1'),
-                    SquareCard(imageLink: '2'),
-                    SquareCard(imageLink: '3'),
-                    SquareCard(imageLink: '4'),
-                    SquareCard(imageLink: '5'),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          SquareCard(imageLink: 'images/1.png'),
+                          SquareCard(imageLink: 'images/2.png'),
+                          SquareCard(imageLink: 'images/3.png'),
+                          SquareCard(imageLink: 'images/4.png'),
+                          SquareCard(imageLink: 'images/5.png'),
+                        ],
+                      ),
+                    ),
+                    BannerCard(
+                      imageLink: 'images/mobile.jpeg',
+                    ),
+                    Row(
+                      children: [
+                        RectangleCard(imageLink: 'images/laptop.jpg'),
+                        RectangleCard(imageLink: 'images/home_app.jpg'),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        RectangleCard(imageLink: 'images/sports2.jpg'),
+                        RectangleCard(imageLink: 'images/shoes.jpg'),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        RectangleCard(imageLink: 'images/cloths2.jpg'),
+                        RectangleCard(imageLink: 'images/cycle.jpg'),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        RectangleCard(imageLink: 'images/run.jpg'),
+                        RectangleCard(imageLink: 'images/gym.jpg'),
+                      ],
+                    ),
                   ],
                 ),
               ),
-              BannerCard(
-                imageLink: 'images/mobile.jpeg',
-              ),
-              Row(
-                children: [
-                  RectangleCard(imageLink: 'images/electronics.jpeg'),
-                  RectangleCard(imageLink: 'images/home_app.webp'),
-                ],
-              ),
-              Row(
-                children: [
-                  RectangleCard(imageLink: 'images/sports.jpeg'),
-                  RectangleCard(imageLink: 'images/furniture.webp'),
-                ],
-              ),
-              Row(
-                children: [
-                  RectangleCard(imageLink: 'images/furniture.webp'),
-                  RectangleCard(imageLink: 'images/furniture.webp'),
-                ],
-              ),
-              Row(
-                children: [
-                  RectangleCard(imageLink: 'images/furniture.webp'),
-                  RectangleCard(imageLink: 'images/furniture.webp'),
-                ],
-              ),
-              Container(
-                margin: const EdgeInsets.all(10),
-                child: const Text(
-                  'Buy one get nothing free',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
+            ),
+            Container(
+              margin: const EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  Icon(
+                    Icons.home_outlined,
+                    size: 40,
                   ),
-                ),
-                alignment: Alignment.center,
-                height: 100,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.green,
-                ),
+                  Icon(
+                    Icons.add_shopping_cart,
+                    size: 40,
+                  ),
+                  Icon(
+                    Icons.wallet_giftcard,
+                    size: 40,
+                  ),
+                  Icon(
+                    Icons.money,
+                    size: 40,
+                  ),
+                ],
               ),
-            ],
-          ),
+              alignment: Alignment.center,
+              height: 80,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: const Color(0xffF9F3EE),
+              ),
+            ),
+          ],
         ),
       ),
     );

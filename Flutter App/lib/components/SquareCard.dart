@@ -8,12 +8,8 @@ class SquareCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(10),
-      child: Text(
-        imageLink,
-        style: const TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20,
-        ),
+      child: Image(
+        image: AssetImage(imageLink),
       ),
       alignment: Alignment.center,
       height: 100,
