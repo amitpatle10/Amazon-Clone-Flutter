@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_flutter_app/components/SquareCard.dart';
+import 'package:fyp_flutter_app/components/BannerCard.dart';
+import 'package:fyp_flutter_app/components/RectangleCard.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,262 +25,45 @@ class HomePage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Text(
-                        '1',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.lightGreen,
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Text(
-                        '2',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.lightGreen,
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Text(
-                        '3',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.lightGreen,
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Text(
-                        '4',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.lightGreen,
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Text(
-                        '5',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.lightGreen,
-                      ),
-                    ),
+                    SquareCard(imageLink: '1'),
+                    SquareCard(imageLink: '2'),
+                    SquareCard(imageLink: '3'),
+                    SquareCard(imageLink: '4'),
+                    SquareCard(imageLink: '5'),
                   ],
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.all(10),
-                child: const Image(
-                  image: AssetImage('images/mobile.jpeg'),
-                ),
-                alignment: Alignment.center,
-                height: 200,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.lightBlueAccent,
-                ),
+              BannerCard(
+                imageLink: 'images/mobile.jpeg',
               ),
               Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Image(
-                        image: AssetImage('images/electronics.jpeg'),
-                        width: 200,
-                        fit: BoxFit.contain,
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.red[50],
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Image(
-                        image: AssetImage('images/home_app.webp'),
-                        width: 200,
-                        fit: BoxFit.contain,
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.red[50],
-                      ),
-                    ),
-                  ),
+                  RectangleCard(imageLink: 'images/electronics.jpeg'),
+                  RectangleCard(imageLink: 'images/home_app.webp'),
                 ],
               ),
               Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Image(
-                        image: AssetImage('images/sports.jpeg'),
-                        width: 150,
-                        fit: BoxFit.contain,
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.red[50],
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Image(
-                        image: AssetImage('images/furniture.webp'),
-                        width: 150,
-                        fit: BoxFit.contain,
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.red[50],
-                      ),
-                    ),
-                  ),
+                  RectangleCard(imageLink: 'images/sports.jpeg'),
+                  RectangleCard(imageLink: 'images/furniture.webp'),
                 ],
               ),
               Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Text(
-                        'Electronics',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.green,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Text(
-                        'Electronics',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.green,
-                      ),
-                    ),
-                  ),
+                  RectangleCard(imageLink: 'images/furniture.webp'),
+                  RectangleCard(imageLink: 'images/furniture.webp'),
                 ],
               ),
               Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Text(
-                        'Electronics',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.green,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(10),
-                      child: const Text(
-                        'Electronics',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      alignment: Alignment.center,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.green,
-                      ),
-                    ),
-                  ),
+                  RectangleCard(imageLink: 'images/furniture.webp'),
+                  RectangleCard(imageLink: 'images/furniture.webp'),
                 ],
               ),
               Container(
                 margin: const EdgeInsets.all(10),
                 child: const Text(
-                  'Electronics',
+                  'Buy one get nothing free',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
