@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_flutter_app/Home/homepage.dart';
+import 'package:fyp_flutter_app/Pages/homepage.dart';
 
 void main() {
   runApp(const MyApp());

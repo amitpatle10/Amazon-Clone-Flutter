@@ -17,7 +17,7 @@ class BannerCard extends StatelessWidget {
       height: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Colors.lightBlueAccent,
+        color: Colors.blue[50],
       ),
     );
   }
